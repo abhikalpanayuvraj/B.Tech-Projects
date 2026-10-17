@@ -1,0 +1,555 @@
+/* =====================================================
+   FULL SCREEN LOADER
+   ===================================================== */
+
+/* Styles the loading screen that covers the entire webpage */
+#loader {
+
+    /* Keeps the loader fixed even while scrolling */
+    position: fixed;
+
+    /* Makes the loader cover the entire viewport
+       (top:0, right:0, bottom:0, left:0) */
+    inset: 0;
+
+    /* Black background for the loading screen */
+    background: #000;
+
+    /* Uses Flexbox to center the logo */
+    display: flex;
+
+    /* Centers content horizontally */
+    justify-content: center;
+
+    /* Centers content vertically */
+    align-items: center;
+
+    /* Places the loader above every other element */
+    z-index: 99999;
+
+    /* Smooth transition when hiding the loader */
+    transition: opacity .8s ease, visibility .8s ease;
+}
+
+
+/* Styles only the image inside the loader */
+#loader img {
+
+    /* Width of the Ferrari logo */
+    width: 70px;
+
+    /* Applies the pulse animation continuously */
+    animation: pulse 1.5s infinite;
+}
+
+
+/* Applied after JavaScript adds the "hide" class */
+#loader.hide {
+
+    /* Makes the loader transparent */
+    opacity: 0;
+
+    /* Removes the loader from view */
+    visibility: hidden;
+}
+
+
+/* =====================================================
+   PULSE ANIMATION
+   ===================================================== */
+
+/* Defines the pulse animation */
+@keyframes pulse {
+
+    /* Starting and ending state */
+    0%,
+    100% {
+
+        /* Original size */
+        transform: scale(1);
+
+        /* Slightly transparent */
+        opacity: .8;
+    }
+
+    /* Middle of the animation */
+    50% {
+
+        /* Enlarges the logo slightly */
+        transform: scale(1.08);
+
+        /* Fully visible */
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   BODY
+   ===================================================== */
+
+/* Styles the entire webpage background */
+body {
+
+    /* Background image */
+    background-image: url(ferrari.jpg);
+
+    /* Prevents the image from repeating */
+    background-repeat: no-repeat;
+
+    /* Scales the image while preserving its aspect ratio */
+    background-size: contain;
+
+    /* Positions the image at the top center */
+    background-position: center top;
+
+    /* Black fills any remaining space */
+    background-color: black;
+
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+/* Styles the header section */
+.Header {
+
+    /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.412);
+
+}
+
+
+/* =====================================================
+   NAVIGATION BAR 1
+   ===================================================== */
+
+/* First navigation bar */
+.Nav1 {
+
+    /* Uses Flexbox */
+    display: flex;
+
+    /* Aligns items to the right */
+    justify-content: right;
+
+    /* White text */
+    color: white;
+
+    /* Space between navigation items */
+    gap: 40px;
+
+    /* Font size */
+    font-size: 15px;
+
+    /* Font family */
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+/* =====================================================
+   NAVIGATION BAR 2
+   ===================================================== */
+
+/* Main navigation bar used in the webpage */
+.Nav2 {
+
+    /* Uses Flexbox */
+    display: flex;
+
+    /* Aligns content to the left */
+    justify-content: left;
+
+    /* White text */
+    color: rgb(255, 255, 255);
+
+    /* Text size */
+    font-size: 20px;
+
+    /* Space between items */
+    gap: 70px;
+
+    /* Font style */
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+/* =====================================================
+   NAVIGATION BAR 3
+   ===================================================== */
+
+/* Another navigation layout */
+.Nav3 {
+
+    /* Uses Flexbox */
+    display: flex;
+
+    /* Left alignment */
+    justify-content: left;
+
+    /* White text */
+    color: rgb(255, 255, 255);
+
+    /* Larger font size */
+    font-size: 25px;
+
+    /* Gap between elements */
+    gap: 55px;
+
+    /* Font style */
+    font-family: 'Times New Roman', Times, serif;
+
+    /* Semi-transparent red background */
+    background-color: rgba(255, 0, 0, 0.53);
+
+}
+
+/* =====================================================
+   BUTTON CONTAINER
+   ===================================================== */
+
+/* Container that holds the "Now", "Next" and "Latest" buttons */
+.but {
+
+    /* Uses Flexbox to place all buttons in a single row */
+    display: flex;
+
+    /* Space between each button */
+    gap: 10px;
+
+    /* Adds space around the entire button container */
+    margin: 5px;
+
+    /* Gives the container rounded corners */
+    border-radius: 20%;
+
+}
+
+
+/* =====================================================
+   MAIN HEADING
+   ===================================================== */
+
+/* Styles only the <h1> inside the .lekh container */
+.lekh h1 {
+
+    /* Bright Ferrari red text */
+    color: rgb(255, 6, 6);
+
+    /* Font used for the heading */
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+/* =====================================================
+   SUBHEADING
+   ===================================================== */
+
+/* Styles only the <h2> inside the .lekh container */
+.lekh h2 {
+
+    /* Same Ferrari red color */
+    color: rgb(255, 6, 6);
+
+    /* Same font family */
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+/* =====================================================
+   MAIN CONTENT CONTAINER
+   ===================================================== */
+
+/* Black section containing the buttons and image slider */
+.ccontain {
+
+    /* Black background */
+    background-color: rgb(0, 0, 0);
+
+    /* Creates space around this section */
+    margin: 35px;
+
+}
+
+
+/* =====================================================
+   SLIDER CONTAINER
+   ===================================================== */
+
+/* Outer section that wraps the complete image slider */
+.container {
+
+    /* Adds internal spacing on every side */
+    padding: 1rem;
+
+}
+
+
+/* =====================================================
+   SLIDER WRAPPER
+   ===================================================== */
+
+/* Parent wrapper of the slider */
+.slider-wrapper {
+
+    /* Makes child absolute positioning relative to this container */
+    position: relative;
+
+    /* Maximum width allowed */
+    max-width: 80rem;
+
+    /* Centers the wrapper horizontally */
+    margin: 0 auto;
+
+}
+
+
+/* =====================================================
+   IMAGE SLIDER
+   ===================================================== */
+
+/* Scrollable image gallery */
+.slider {
+
+    /* Places every image in one horizontal row */
+    display: flex;
+
+    /* Maintains a widescreen (16:9) aspect ratio */
+    aspect-ratio: 16/9;
+
+    /* Allows horizontal scrolling */
+    overflow-x: auto;
+
+    /* Forces the scroll position to snap to each image */
+    scroll-snap-type: x mandatory;
+
+    /* Creates smooth scrolling animation */
+    scroll-behavior: smooth;
+
+    /* Adds a shadow around the slider */
+    box-shadow: 0 1.5rem 3rem -0.75rem
+        hsla(0, 0%, 0%, 0.25);
+
+    /* Hides the scrollbar in Firefox */
+    scrollbar-width: none;
+
+    /* Hides the scrollbar in older Microsoft browsers */
+    -ms-overflow-style: none;
+
+}
+
+
+/* =====================================================
+   SLIDER IMAGES
+   ===================================================== */
+
+/* Styles every image inside the slider */
+.slider img {
+
+    /* Every image occupies the entire slider width */
+    flex: 1 0 100%;
+
+    /* Image snaps perfectly when scrolling */
+    scroll-snap-align: start;
+
+    /* Crops the image to completely fill the slide
+       while maintaining its aspect ratio */
+    object-fit: cover;
+
+}
+/* =====================================================
+   SLIDER NAVIGATION
+   ===================================================== */
+
+/* Container that holds the slider navigation dots */
+.slider-nav {
+
+    /* Uses Flexbox to arrange the dots horizontally */
+    display: flex;
+
+    /* Horizontal spacing between each navigation dot */
+    column-gap: 1rem;
+
+    /* Positions the navigation relative to .slider-wrapper */
+    position: absolute;
+
+    /* Places the navigation near the bottom of the slider */
+    bottom: 1.25rem;
+
+    /* Moves the navigation to the horizontal center */
+    left: 50%;
+
+    /* Adjusts the position so it is perfectly centered */
+    transform: translateX(-50%);
+
+    /* Keeps the navigation above the slider images */
+    z-index: 1;
+
+}
+
+
+/* =====================================================
+   SLIDER NAVIGATION BUTTONS
+   ===================================================== */
+
+/* Styles every anchor (<a>) inside the slider navigation */
+.slider-nav a {
+
+    /* Width of each navigation dot */
+    width: 0.5rem;
+
+    /* Height of each navigation dot */
+    height: 0.5rem;
+
+    /* Makes each dot perfectly circular */
+    border-radius: 50%;
+
+    /* Semi-transparent Ferrari red color */
+    background-color: rgba(241, 10, 10, 0.61);
+
+    /* Initial visibility of the dots */
+    opacity: 75%;
+
+    /* Smooth transition when hovering */
+    transition: opacity ease 250ms;
+
+}
+
+
+/* =====================================================
+   HOVER EFFECT FOR NAVIGATION DOTS
+   ===================================================== */
+
+/* Changes the appearance when the mouse hovers over a dot */
+.slider-nav a:hover {
+
+    /* Makes the dot fully visible */
+    opacity: 100%;
+
+}
+
+
+/* =====================================================
+   GRID CONTAINER
+   ===================================================== */
+
+/* Creates a CSS Grid layout */
+.grid-container {
+
+    /* Creates four equal-height rows */
+    grid-template-rows: repeat(4, 1fr);
+
+    /* Creates four equal-width columns */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* Enables CSS Grid */
+    display: grid;
+
+    /* Makes the grid occupy the full viewport height */
+    height: 100vh;
+
+    /* Adds spacing between grid items */
+    gap: 10px;
+
+}
+
+
+/* =====================================================
+   GENERAL LINK STYLING
+   ===================================================== */
+
+/* Styles every hyperlink (<a>) on the webpage */
+a {
+
+    /* Controls text scaling on supported browsers */
+    text-size-adjust: 50px;
+
+    /* Removes the default underline */
+    text-decoration: none;
+
+    /* Font family for links */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    /* Beige text color */
+    color: beige;
+
+}
+
+
+/* =====================================================
+   GRID ITEMS
+   ===================================================== */
+
+/* Styles each individual grid element */
+.grid-item {
+
+    /* Internal spacing between the content and border */
+    padding: 2em;
+
+    /* Font size of the content */
+    font-size: 1.5rem;
+
+    /* Rounded corners */
+    border-radius: 5px;
+
+    /* Background image fills the entire element */
+    background-size: cover;
+
+    /* Prevents the background image from repeating */
+    background-repeat: no-repeat;
+
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+/* Styles the footer section */
+footer {
+
+    /* Centers all footer text */
+    text-align: center;
+
+    /* Ferrari red background */
+    background-color: #ff0000;
+
+    /* Black text */
+    color: #000000;
+
+}
+
+
+/* =====================================================
+   FOOTER LINKS
+   ===================================================== */
+
+/* Styles hyperlinks inside the footer */
+footer a {
+
+    /* White link color */
+    color: rgb(255, 255, 255);
+
+    /* Removes the default underline */
+    text-decoration: none;
+
+}
+
+
+/* =====================================================
+   FOOTER LINK HOVER EFFECT
+   ===================================================== */
+
+/* Applies when the mouse hovers over a footer link */
+footer a:hover {
+
+    /* Displays an underline during hover */
+    text-decoration: underline;
+
+}

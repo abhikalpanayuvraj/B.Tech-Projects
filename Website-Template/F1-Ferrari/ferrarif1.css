@@ -1,0 +1,440 @@
+/* ==========================================================
+                    RESET
+This removes the browser's default spacing.
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* ==========================================================
+                WEBSITE SETTINGS
+========================================================== */
+
+html{
+
+    /* Smooth scrolling when clicking links */
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:#000;
+    color:white;
+
+    /* Font for the whole website */
+    font-family:Arial, Helvetica, sans-serif;
+
+    /* Hide sideways scrolling */
+    overflow-x:hidden;
+
+}
+
+
+/* ==========================================================
+                    LOADING SCREEN
+========================================================== */
+
+#loader{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    background:black;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    transition:0.8s;
+
+}
+
+
+/* Ferrari Horse */
+
+#loader img{
+
+    width:70px;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+
+/* Loader disappears */
+
+#loader.hide{
+
+    opacity:0;
+    visibility:hidden;
+
+}
+
+
+/* Horse animation */
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+/* ==========================================================
+                    NAVBAR
+========================================================== */
+
+.Header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:20px 60px;
+
+    z-index:1000;
+
+    transition:.4s;
+
+}
+
+
+/* This class will be added by JavaScript */
+
+.Header.active{
+
+    background:rgba(0,0,0,.95);
+
+}
+
+
+/* Navigation */
+
+.Nav2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+
+/* Ferrari logo */
+
+.logo{
+
+    width:45px;
+
+}
+
+
+/* Navigation links */
+
+.Nav2 a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:17px;
+
+    transition:.3s;
+
+}
+
+
+/* Mouse hover */
+
+.Nav2 a:hover{
+
+    color:#ff2800;
+
+}
+
+
+
+/* ==========================================================
+                    HERO SECTION
+========================================================== */
+
+.hero{
+
+    width:100%;
+
+    height:100vh;
+
+    background-image:url("ferrari.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-left:100px;
+
+}
+
+
+/* Text */
+
+.hero-text{
+
+    max-width:600px;
+
+}
+
+
+/* Ferrari */
+
+.hero h1{
+
+    font-size:70px;
+
+}
+
+
+/* Formula One Team */
+
+.hero h2{
+
+    color:#ff2800;
+
+    margin-top:15px;
+
+}
+
+
+/* Paragraph */
+
+.hero p{
+
+    margin-top:20px;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+/* ==========================================================
+                    NEWS SECTION
+This section displays the three Ferrari news images.
+========================================================== */
+
+.news{
+
+    width:90%;
+
+    margin:100px auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+}
+
+
+/* Each news card */
+
+.card{
+
+    flex:1;
+
+    overflow:hidden;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+}
+
+
+/* Images */
+
+.card img{
+
+    width:100%;
+
+    display:block;
+
+    transition:0.5s;
+
+}
+
+
+/* Zoom image when mouse is over it */
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* ==========================================================
+                    IMAGE SLIDER
+========================================================== */
+
+.slider-section{
+
+    width:90%;
+
+    margin:100px auto;
+
+}
+
+
+/* Slider box */
+
+.slider{
+
+    display:flex;
+
+    overflow-x:auto;
+
+    gap:20px;
+
+    scroll-snap-type:x mandatory;
+
+    scrollbar-width:none;
+
+}
+
+
+/* Hide scrollbar in Chrome */
+
+.slider::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+/* Images */
+
+.slider img{
+
+    min-width:100%;
+
+    border-radius:15px;
+
+    scroll-snap-align:start;
+
+}
+
+
+
+/* ==========================================================
+                    VIDEO SECTION
+========================================================== */
+
+.video-section{
+
+    width:90%;
+
+    margin:100px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.video-section video{
+
+    width:100%;
+
+    border-radius:15px;
+
+}
+
+
+
+/* ==========================================================
+                        FOOTER
+========================================================== */
+
+footer{
+
+    margin-top:100px;
+
+    padding:40px;
+
+    text-align:center;
+
+    background:#111;
+
+    color:white;
+
+}
+
+
+
+/* ==========================================================
+                SIMPLE FADE ANIMATION
+========================================================== */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+
+/* JavaScript will add this class */
+
+.fade.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!-- Declares that this document uses HTML5 -->
+
+<html lang="en">
+<!-- Root element of the webpage. 'lang' specifies that the page language is English. -->
+
+<head>
+
+    <!-- Defines the character encoding used by the webpage -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title displayed on the browser tab -->
+    <title>Ferrari F1</title>
+
+    <!-- Links the external CSS file with this HTML page -->
+    <link rel="stylesheet" href="ferrari_commented.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================
+         LOADING SCREEN
+         ========================== -->
+
+    <!-- Full-screen loader displayed while the webpage loads -->
+    <div id="loader">
+
+        <!-- Ferrari logo shown in the loading animation -->
+        <img src="horsef1.png" alt="Ferrari">
+
+    </div>
+
+    <!-- ==========================
+         JAVASCRIPT
+         ========================== -->
+
+    <script>
+
+        // Wait until every resource of the webpage
+        // (images, CSS, videos, etc.) has finished loading.
+        window.addEventListener("load", () => {
+
+            // Creates a delay before hiding the loader.
+            setTimeout(() => {
+
+                // Adds the "hide" class to the loader.
+                // The CSS attached to this class fades
+                // the loader out smoothly.
+                document.getElementById("loader").classList.add("hide");
+
+            }, 1500);     // Delay of 1500 milliseconds (1.5 seconds)
+
+        });
+
+    </script>
+
+
+    <!-- ==========================
+         HEADER SECTION
+         ========================== -->
+
+    <!-- Main header container -->
+    <div class="Header">
+
+        <!-- Navigation bar -->
+        <div class="Nav2">
+
+            <!-- Ferrari logo -->
+            <div class="ele2">
+                <img src="Ferrari-Logo.avif" alt="" width="10px">
+            </div>
+
+            <!-- Navigation option -->
+            <div class="ele2">
+                Latest
+            </div>
+
+            <!-- Navigation option -->
+            <div class="ele2">
+                2026
+            </div>
+
+            <!-- Navigation option -->
+            <div class="ele2">
+                Team
+            </div>
+
+            <!-- Navigation option -->
+            <div class="ele2">
+                Sustinability
+            </div>
+
+            <!-- Navigation option -->
+            <div class="ele2">
+                fans
+            </div>
+
+            <!-- Navigation option -->
+            <div class="ele2">
+                Partners
+            </div>
+
+            <!-- Navigation option -->
+            <div class="ele2">
+                Career
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Closing div present in the original code -->
+    </div>
+
+
+    <!-- These line breaks create vertical spacing
+         between the header and the next section -->
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+        <!-- ==========================
+         THREE FEATURE IMAGES
+         ========================== -->
+
+    <!-- Flex container that places all three images side by side -->
+    <div style="display: flex;">
+
+        <!-- First Ferrari image -->
+        <div>
+            <img
+                src="https://ferrari-view.thron.com/api/xcontents/resources/delivery/getThumbnail/ferrari/1440x900/5ab60c94-8b97-46f9-a515-2e6a9a3062c9.jpg?v=139"
+                alt=""
+                width="500px">
+        </div>
+
+        <!-- Second Ferrari image -->
+        <div>
+            <img
+                src="https://ferrari-view.thron.com/api/xcontents/resources/delivery/getThumbnail/ferrari/1440x900/af3da279-ccfa-4adc-b546-c0f5f11c2822.jpg?v=139"
+                alt=""
+                width="500px">
+        </div>
+
+        <!-- Third Ferrari image -->
+        <div>
+            <img
+                src="https://ferrari-view.thron.com/api/xcontents/resources/delivery/getThumbnail/ferrari/1440x900/4d4d7c08-1736-4620-b728-d85054a9b48f.jpg?v=139"
+                alt=""
+                width="500px">
+        </div>
+
+    </div>
+
+
+    <!-- ==========================
+         NEWS / SLIDER SECTION
+         ========================== -->
+
+    <!-- Main container that holds the buttons and image slider -->
+    <div class="ccontain">
+
+
+        <!-- ==========================
+             BUTTON SECTION
+             ========================== -->
+
+        <!-- Flex container used to align the buttons in one row -->
+        <div class="but">
+
+            <!-- Active button representing the current tab -->
+            <button
+                style="border-radius:10%; background-color:rgba(255, 0, 0, 0.863); border:none;">
+                Now
+            </button>
+
+            <!-- Secondary button -->
+            <button
+                style="border-radius:10%; background-color:rgba(48, 46, 46, 0.863); border:none; color:white">
+                Next
+            </button>
+
+            <!-- Secondary button -->
+            <button
+                style="border-radius:10%; background-color:rgba(48, 46, 46, 0.863); border:none; color:white">
+                Latest
+            </button>
+
+            <!-- Displays the current Formula 1 event -->
+            <p style="color:rgba(255, 6, 6, 0.863);">
+
+                British GP
+
+            <p>
+
+        </div>
+
+
+        <!-- ==========================
+             IMAGE SLIDER
+             ========================== -->
+
+        <!-- Section used as the outer container of the slider -->
+        <section class="container">
+
+            <!-- Wrapper around the complete slider -->
+            <div class="slider-wrapper">
+
+                <!-- Scrollable image slider -->
+                <div class="slider">
+
+                    <!-- ==========================
+                         SLIDE 1
+                         ========================== -->
+
+                    <!-- First image inside the slider -->
+                    <!-- ID is used for navigation links -->
+                    <img
+                        id="slide1"
+                        src="https://ferrari-view.thron.com/api/xcontents/resources/delivery/getThumbnail/ferrari/1440x900/918bf9cf-7f03-4db0-8e88-f0375f6cc919.jpg?v=153"
+                        alt="Loading......">
+
+
+                    <!-- ==========================
+                         SLIDE 2
+                         ========================== -->
+
+                    <!-- Second slider image -->
+                    <img
+                        id="slide2"
+                        src="https://ferrari-view.thron.com/api/xcontents/resources/delivery/getThumbnail/ferrari/1440x900/ac7f9fcd-c317-4d8d-afd3-e889ff4c3876.jpg?v=153"
+                        alt="Loading......">
+
+
+                    <!-- ==========================
+                         SLIDE 3
+                         ========================== -->
+
+                    <!-- Third slider image -->
+                    <img
+                        id="slide3"
+                        src="https://ferrari-view.thron.com/api/xcontents/resources/delivery/getThumbnail/ferrari/1440x900/24867fa2-5317-4cb2-b830-edd596db717b.jpg?v=139"
+                        alt="Loading......">
+
+
+                    <!-- ==========================
+                         SLIDE 4
+                         ========================== -->
+
+                    <!-- Fourth slider image -->
+                    <img
+                        id="slide4"
+                        src="https://ferrari-view.thron.com/api/xcontents/resources/delivery/getThumbnail/ferrari/1440x900/5c7d6a11-1e3b-43a3-a233-213cf6d18025.jpg?v=139"
+                        alt="Loading......">
+
+                </div>
+
+
+                <!-- ==========================
+                     SLIDER NAVIGATION
+                     ========================== -->
+
+                <!-- Navigation dots that jump to each slide -->
+                <div class="slider-nav">
+
+                    <!-- Clicking this dot scrolls to slide 1 -->
+                    <a href="#slide1"></a>
+
+                    <!-- Clicking this dot scrolls to slide 2 -->
+                    <a href="#slide2"></a>
+
+                    <!-- Clicking this dot scrolls to slide 3 -->
+                    <a href="#slide3"></a>
+
+                    <!-- Clicking this dot scrolls to slide 4 -->
+                    <a href="#slide4"></a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+    <!-- Adds vertical spacing before the text section -->
+    <br><br><br><br><br>
+
+    <!-- ==========================
+         FERRARI INFORMATION SECTION
+         ========================== -->
+
+    <!-- Container that groups the heading and description -->
+    <div class="lekh">
+
+        <!-- Main heading of the section -->
+        <h1>
+            Ferrari
+        </h1>
+
+        <!-- Subheading describing the team -->
+        <h2>
+            FORMULA 1 TEAM
+        </h2>
+
+        <!-- Short description displayed below the headings -->
+        <p>
+            We inovate dream faster than light....
+        </p>
+
+    </div>
+
+
+    <!-- ==========================
+         VIDEO SECTION
+         ========================== -->
+
+    <!-- Flex container used to horizontally center the video -->
+    <div style="display: flex; justify-content:center">
+
+        <!-- HTML5 video player -->
+        <video
+            controls
+            playsinline
+            preload="auto"
+            width="1080"
+            height="720">
+
+            <!-- Video source file -->
+            <source src="f1.mp4" type="video/mp4">
+
+            <!-- Displayed only if the browser cannot play the video -->
+            Your browser does not support the video tag.
+
+        </video>
+
+    </div>
+
+
+    <!-- ==========================
+         FOOTER
+         ========================== -->
+
+    <!-- Footer section displayed at the bottom of the webpage -->
+    <footer>
+
+        <!-- Copyright information -->
+        <p>
+            &copy; 2026 My Website Name. All rights reserved.
+        </p>
+
+        <!-- Contact link -->
+        <!-- "mailto:" opens the user's default email application -->
+        <p>
+            <a href="mailto:info@example.com">
+
+                Contact Us
+
+            </a>
+        </p>
+
+    </footer>
+
+
+    <!-- ==========================
+         END OF WEBPAGE
+         ========================== -->
+
+</body>
+<!-- Ends the visible body of the webpage -->
+
+</html>
+<!-- Ends the HTML document -->
