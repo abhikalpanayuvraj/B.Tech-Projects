@@ -1,0 +1,21 @@
+body{
+                background-image: url(exhibit.jpeg);
+                background-repeat:no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+.box{
+    text-align: right; 
+    background-color: #ffffff6e; 
+    color: #000000; 
+    max-width: 700px;
+    display: flex;  justify-content: center;flex-direction: column; 
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+
+
+.lbox{
+    display: flex; justify-content: right;
+}
